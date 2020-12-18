@@ -3,7 +3,7 @@ name: GSI - Erfan
 on: [push]
 
 env:
-  RECOVERY: https://drive.google.com/u/0/uc?id=178q3cQl4n48sT6_3K9s90rFPPvJDoB3Q&export=download
+  RECOVERY: https://drive.google.com/uc?id=1lawYvyhVstCS3Y4j03RA0VgBqTY-j-gx&export=download
   TZ: America/Sao_Paulo
 jobs:
   build:
