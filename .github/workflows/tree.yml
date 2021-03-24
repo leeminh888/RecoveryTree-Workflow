@@ -20,8 +20,8 @@ jobs:
 
        - name: Install the tools
          run: |
-              git clone https://github.com/SebaUbuntu/TWRP-device-tree-generator setup
-              cd setup
+              git clone https://github.com/SebaUbuntu/TWRP-device-tree-generator
+              cd TWRP-device-tree-generator
               chmod 0777 *
               sudo apt install cpio
               sudo pacman -S cpio
