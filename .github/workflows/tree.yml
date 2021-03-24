@@ -3,7 +3,7 @@ name: Tạo tree
 on: [push]
 
 env:
-  RECOVERY: https://drive.google.com/uc?id=1lawYvyhVstCS3Y4j03RA0VgBqTY-j-gx&export=download
+  RECOVERY: https://doc-0o-80-docs.googleusercontent.com/docs/securesc/if29ailm9asubceum7d4i81u0va33rs4/cgh7q67fp17pmromrk0babmro1a8eahb/1616552850000/06241952564137785350/06241952564137785350/1xegoVNFGnvbXNbD3_RG59-mOjGth4x86?e=download&authuser=0&nonce=b57ak6kknp78c&user=06241952564137785350&hash=l9iv06dv46qb8j38qpeal8dni07q7kqm
   TZ: America/Sao_Paulo
 jobs:
   build:
@@ -33,7 +33,7 @@ jobs:
               cd work
               mkdir input
               wget $RECOVERY -P input
-              python3 -m twrpdtgen input/*
+              python3 -m twrpdtgen --output OUTPUT --no-git recovery_image input/*
               rm -r input
        
        - name: Upload tree
