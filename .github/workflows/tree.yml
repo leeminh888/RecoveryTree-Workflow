@@ -24,7 +24,6 @@ jobs:
               cd TWRP-device-tree-generator
               chmod 0777 *
               sudo apt install cpio
-              sudo pacman -S cpio
               sudo -E apt-get -qq install git openjdk-8-jdk wget
               pip3 install .
               
