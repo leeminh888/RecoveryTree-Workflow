@@ -32,14 +32,12 @@ jobs:
          run: |
               mkdir work
               cd work
-              mkdir input
-              wget $RECOVERY -P input
-              python3 -m twrpdtgen --output OUTPUT --no-git recovery_image input/*
-              rm -r input
+              wget $RECOVERY
+              python3 -m twrpdtgen --output OUTPUT --no-git recovery_image
        
        - name: Upload tree
          run: |
-              cd work/input
+              cd work
               zip -r tree.zip *
               touch link.txt
               ./transfer wet tree.zip | grep Download >> link.txt
