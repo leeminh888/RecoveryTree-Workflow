@@ -33,7 +33,7 @@ jobs:
               mkdir work
               cd work
               wget $RECOVERY
-              python3 -m twrpdtgen --output OUTPUT --no-git recovery_image
+              python3 -m twrpdtgen --output OUTPUT -k --no-git recovery.img
        
        - name: Upload tree
          run: |
