@@ -34,7 +34,7 @@ jobs:
               mkdir work
               cd work
               wget $RECOVERY
-              python3 -m twrpdtgen --output OUTPUT --no-git boot.img
+              python3 -m twrpdtgen -o OUTPUT --no-git boot.img
        
        - name: Upload tree
          run: |
