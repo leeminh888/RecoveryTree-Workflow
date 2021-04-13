@@ -3,7 +3,7 @@ name: Tạo tree
 on: [push]
 
 env:
-  RECOVERY: https://download938.mediafire.com/08zucy9htwmg/66bl6fiut9bxfvi/recovery.img
+  RECOVERY: https://download1522.mediafire.com/pduehq22sutg/wmra2o4nkjjojlk/boot.img
   TZ: America/Sao_Paulo
 jobs:
   build:
@@ -25,7 +25,8 @@ jobs:
               chmod 0777 *
               sudo apt install cpio
               sudo -E apt-get -qq install git openjdk-8-jdk wget
-              pip3 install .
+              pip3 install
+              pip3 install twrpdtgen
               
        
        - name: Download recovery and extract tree
@@ -33,7 +34,7 @@ jobs:
               mkdir work
               cd work
               wget $RECOVERY
-              python3 -m twrpdtgen --output OUTPUT --no-git recovery.img
+              python3 -m twrpdtgen --output OUTPUT --no-git boot.img
        
        - name: Upload tree
          run: |
